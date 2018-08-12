@@ -338,6 +338,7 @@ h2 {
 .details .details-subsection {
   margin: 4px 0 4px 0;
 }
+
 .details .concise ul {
   margin: 0 !important;
   -webkit-columns: 2;
@@ -351,6 +352,10 @@ h2 {
 
 .details .concise li {
   margin-left: 0 !important;
+}
+
+.details .details-subsection b {
+  font-weight: bold;
 }
 
 /* sidebar */
