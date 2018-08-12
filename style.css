@@ -14,6 +14,7 @@
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.18in;
 
+  --sidebar-color: #f4f4f5;
   --sidebar-horizontal-padding: 0.2in;
 
   /* XXX: using px for very good precision control */
@@ -42,6 +43,8 @@
   color: #444;
   hyphens: auto;
   display: block;
+  margin: auto;
+  outline: 1px solid var(--sidebar-color);
 }
 
 h1,
@@ -68,7 +71,7 @@ li {
   width: var(--sidebar-width);
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: #f2f2f2;
+  background-color: var(--sidebar-color);
   font-size: 8.5pt;
 }
 
@@ -144,8 +147,21 @@ h2 {
 .contact-item > .material-icons {
   display: inline;
 }
+.contact-item {
+  display: flex;
+  margin-bottom: 5px;
+}
+.contact-item > .contact-icon {
+  margin-right: 4px;
+  font-size: 12pt;
+}
+.contact-item > .contact-icon,
+.contact-item > .contact-data {
+  display: block;
+}
 .contact-item > .contact-data {
   vertical-align: top;
+  line-height: 11pt;
 }
 
 #experience-title > .material-icons {
@@ -266,10 +282,6 @@ h2 {
   font-size: 9pt;
 }
 
-.main-block:not(.concise) .details div {
-  margin: 0 0 0 0;
-}
-
 .main-block:not(.concise) .blocks:last-child .details div {
   margin-bottom: 0;
 }
@@ -323,6 +335,9 @@ h2 {
   content: "• ";
 }
 
+.details .details-subsection {
+  margin: 4px 0 4px 0;
+}
 .details .concise ul {
   margin: 0 !important;
   -webkit-columns: 2;
@@ -354,11 +369,6 @@ h2 {
   padding-left: 0;
   font-weight: 400;
   line-height: 1.75;
-}
-
-#contact li > i {
-  width: 9pt; /* for text alignment */
-  text-align: right;
 }
 
 #skills {
