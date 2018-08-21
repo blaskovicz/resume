@@ -73,6 +73,8 @@ li {
   padding: 0.6in var(--sidebar-horizontal-padding);
   background-color: var(--sidebar-color);
   font-size: 8.5pt;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 /* main */
@@ -239,6 +241,8 @@ h2 {
   height: var(--decorator-outer-dim);
   border-radius: calc(var(--decorator-outer-dim) / 2);
   background-color: #fff;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .decorator::after {
@@ -257,6 +261,8 @@ h2 {
     (var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2
   );
   background-color: #555;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .blocks:last-child .decorator {
