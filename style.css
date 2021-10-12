@@ -30,7 +30,7 @@
   --main-blocks-title-icon-offset-left: -19pt;
 }
 * {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-size: 9pt;
 }
 #wrapper {
@@ -141,7 +141,7 @@ h2 {
   z-index: 0;
   line-height: 0;
   font-size: 0;
-  content: " ";
+  content: ' ';
 }
 
 /**** minor tweaks on the icon fonts ****/
@@ -211,7 +211,7 @@ h2 {
   right: 9pt;
   display: block;
   height: 10pt;
-  content: "|";
+  content: '|';
 }
 
 .decorator {
@@ -235,7 +235,7 @@ h2 {
   position: absolute;
   top: var(--decorator-outer-offset-top);
   left: var(--decorator-outer-offset-left);
-  content: " ";
+  content: ' ';
   display: block;
   width: var(--decorator-outer-dim);
   height: var(--decorator-outer-dim);
@@ -251,7 +251,7 @@ h2 {
   left: calc(
     var(--decorator-outer-offset-left) + var(--decorator-border-width)
   );
-  content: " ";
+  content: ' ';
   display: block;
   width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
   height: calc(
@@ -338,7 +338,7 @@ h2 {
 #main li::before {
   position: relative;
   margin-left: -4.25pt;
-  content: "• ";
+  content: '• ';
 }
 
 .details .details-subsection {
@@ -375,6 +375,10 @@ h2 {
   margin-top: 0.5in;
 }
 
+.side-block i.material-icons {
+  vertical-align: bottom;
+}
+
 #contact ul {
   margin-top: 0.05in;
   padding-left: 0;
@@ -382,11 +386,13 @@ h2 {
   line-height: 1.75;
 }
 
-#skills {
+#skills,
+#languages {
   line-height: 1.5;
 }
 
-#skills ul {
+#skills ul,
+#languages ul {
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
