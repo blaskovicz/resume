@@ -10,7 +10,7 @@
 :root {
   --page-width: 8.5in;
   --page-height: 11in;
-  --main-width: 6.4in;
+  --main-width: 6.7in;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.18in;
 
@@ -299,13 +299,20 @@ h2 {
 }
 
 .details .place {
-  float: left;
   font-size: 8pt;
+  font-weight: lighter;
+  float: right;
+  margin-right: 10px;
+}
+
+.details .place.same {
+  font-weight: 100;
 }
 
 .details .location {
+  font-weight: lighter;
+  font-size: 8pt;
   float: right;
-  font-size: 7.5pt;
 }
 
 .details div {
