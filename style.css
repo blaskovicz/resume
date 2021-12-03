@@ -26,6 +26,7 @@
   --main-blocks-title-icon-offset-left: -19pt;
 }
 
+/* small device mode */
 @media not print {
   @media (max-width: 700px) {
     :root {
@@ -33,6 +34,7 @@
       --page-height: 100%;
       --main-width: 100%;
       --sidebar-width: 0%;
+      --date-block-width: 0in;
     }
     #sidebar {
       display: none;
@@ -42,10 +44,48 @@
       min-width: 500px;
     }
     #main {
-      width: 90% !important;
+      width: 100% !important;
+    }
+    .details {
+      padding-left: 0.7em !important;
+    }
+    .details .location,
+    .details .place {
+      font-size: 12pt !important;
+    }
+    .date {
+      display: none;
+    }
+    .date-sm {
+      padding-right: 1em;
+    }
+    #title {
+      position: inherit !important;
+    }
+    .details .title {
+      display: block;
+    }
+    .details .place {
+      float: left !important;
+    }
+    .details .location {
+      float: none !important;
+    }
+    #contact-alt li::before {
+      content: none !important;
+    }
+    #contact-alt {
+      padding-left: 0 !important;
+      line-height: -1em;
+    }
+    * {
+      font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+      font-size: 12pt;
     }
   }
 }
+
+/* large device and print mode */
 @media (min-width: 701px), print {
   :root {
     --page-width: 8.5in !important;
@@ -53,12 +93,18 @@
     --main-width: 6.7in;
     --sidebar-width: calc(var(--page-width) - var(--main-width));
   }
+  .date-sm {
+    display: none;
+  }
+  * {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 9pt;
+  }
+  #contact-alt {
+    display: none;
+  }
 }
 
-* {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  font-size: 9pt;
-}
 #wrapper {
   width: var(--page-width);
   height: var(--page-height);
@@ -413,23 +459,6 @@ h2 {
 
 .side-block i.material-icons {
   vertical-align: bottom;
-}
-
-@media not print {
-  @media (max-width: 700px) {
-    #contact-alt li::before {
-      content: none !important;
-    }
-    #contact-alt {
-      padding-left: 0 !important;
-    }
-  }
-}
-
-@media (min-width: 701px), print {
-  #contact-alt {
-    display: none;
-  }
 }
 
 #contact ul {
