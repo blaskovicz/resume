@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +14,30 @@
   <div id="wrapper">
     <section id="main">
       <header id="title">
-        <h1>Zachary Auclair</h1>
+        <h1 class="name">Zachary Auclair <span class="pronouns">(He/Him)</span></h1>
+        <ul id="contact-alt">
+          <li class='contact-item'>
+            <i class="material-icons contact-icon">link</i>
+            <span class='contact-data'>&#119;&#119;&#119;&#46;&#99;&#97;&#114;&#108;&#121;&#122;&#97;&#99;&#104;&#46;&#99;&#111;&#109;</span>
+          </li>
+          <li class='contact-item'>
+            <i class="material-icons contact-icon">code</i>
+            <span class='contact-data'>&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#47;&#98;&#108;&#97;&#115;&#107;&#111;&#118;&#105;&#99;&#122;</span>
+          </li>
+          <li class='contact-item'>
+            <i class="material-icons contact-icon">email</i>
+            <span class='contact-data'>&#122;&#97;&#99;&#104;&#64;&#99;&#97;&#114;&#108;&#121;&#122;&#97;&#99;&#104;&#46;&#99;&#111;&#109;</span>
+          </li>
+          <li class='contact-item'>
+            <i class="material-icons contact-icon">phone</i>
+            <span class='contact-data'>&#50;&#48;&#51;&#46;&#57;&#51;&#57;&#46;&#55;&#51;&#53;&#57;</span>
+          </li>
+          <li class='contact-item'>
+            <i class="material-icons contact-icon">work_outline</i>
+            <span class='contact-data'>&#108;&#105;&#110;&#107;&#101;&#100;&#105;&#110;&#46;&#99;&#111;&#109;&#47;&#105;&#110;&#47;&#122;&#97;&#99;&#104;&#97;&#117;&#99;&#108;&#97;&#105;&#114;
+            </span>
+          </li>
+        </ul>
       </header>
       <section class="main-block">
         <h2 id='experience-title' class='detail-title'>
@@ -230,11 +254,10 @@
               </h3>
             </header>
             <div>
-              GPA:
-              <code>3.7/4</code>
-            </div>
-            <div>
-              Dean's List every year.
+              <ul>
+                <li>GPA: <code>3.7/4</code></li>
+                <li>Dean's List every year</li>
+              </ul>
             </div>
           </div>
         </section>

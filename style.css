@@ -8,10 +8,6 @@
 }
 
 :root {
-  --page-width: 8.5in;
-  --page-height: 11in;
-  --main-width: 6.7in;
-  --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.18in;
 
   --sidebar-color: #f4f4f5;
@@ -29,6 +25,36 @@
 
   --main-blocks-title-icon-offset-left: -19pt;
 }
+
+@media not print {
+  @media (max-width: 700px) {
+    :root {
+      --page-width: 100%;
+      --page-height: 100%;
+      --main-width: 100%;
+      --sidebar-width: 0%;
+    }
+    #sidebar {
+      display: none;
+    }
+    #wrapper {
+      padding-bottom: 2em;
+      min-width: 500px;
+    }
+    #main {
+      width: 90% !important;
+    }
+  }
+}
+@media (min-width: 701px), print {
+  :root {
+    --page-width: 8.5in !important;
+    --page-height: 11in;
+    --main-width: 6.7in;
+    --sidebar-width: calc(var(--page-width) - var(--main-width));
+  }
+}
+
 * {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-size: 9pt;
@@ -44,7 +70,7 @@
   hyphens: auto;
   display: block;
   margin: auto;
-  outline: 1px solid var(--sidebar-color);
+  /* outline: 1px solid var(--sidebar-color); */
 }
 
 h1,
@@ -80,7 +106,6 @@ li {
 /* main */
 
 /** big title **/
-#title,
 h1,
 h2 {
   text-transform: uppercase;
@@ -90,6 +115,10 @@ h2 {
   position: relative;
   left: 0.55in;
   line-height: 1.2;
+}
+
+#title .pronouns {
+  font-weight: 100;
 }
 
 #title h1 {
@@ -386,6 +415,23 @@ h2 {
   vertical-align: bottom;
 }
 
+@media not print {
+  @media (max-width: 700px) {
+    #contact-alt li::before {
+      content: none !important;
+    }
+    #contact-alt {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+@media (min-width: 701px), print {
+  #contact-alt {
+    display: none;
+  }
+}
+
 #contact ul {
   margin-top: 0.05in;
   padding-left: 0;
@@ -395,6 +441,7 @@ h2 {
 
 #skills,
 #languages {
+  margin-top: 1em;
   line-height: 1.5;
 }
 
@@ -402,6 +449,11 @@ h2 {
 #languages ul {
   margin: 0.05in 0 0.15in;
   padding: 0;
+}
+
+#languages .material-icons,
+#skills .material-icons {
+  font-size: 15pt;
 }
 
 #disclaimer {
